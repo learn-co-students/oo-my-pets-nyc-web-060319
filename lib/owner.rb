@@ -29,7 +29,7 @@ class Owner
   end
 
   def buy_fish(name)
-    fish = Fish.new(name)
+    fish = Fish.new(name)  # pets[:fishes] << Fish.new(name)
     @pets[:fishes] << fish
     fish.owner = self
   end
@@ -62,7 +62,6 @@ class Owner
     @pets.each do |type, pets|
       pets.each {|pet| pet.mood = "nervous"}
     end
-
     @pets.clear
   end
 
